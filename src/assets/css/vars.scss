@@ -1,0 +1,22 @@
+@import "colors";
+@import "helpers";
+
+$font-family-sans-serif:      'nimbus-sans', sans-serif;
+$font-family-sans-serif-alt:  'nimbus-sans-condensed', sans-serif;
+
+$font-size-base:              1rem;
+$h1-font-size:                $font-size-base * 3;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+
+$font-weight-lighter:         100;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+$font-weight-bolder:          900;
+
+$font-family-base:            $font-family-sans-serif;
+$headings-font-family:        $font-family-sans-serif-alt;

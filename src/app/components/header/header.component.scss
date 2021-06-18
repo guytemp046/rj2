@@ -1,0 +1,18 @@
+:host {
+  position: absolute;
+  width: 100vw;
+  z-index: 50;
+}
+
+.navbar {
+  background: none;
+
+  &.navbar-dark .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-brand img {
+    width: 200px;
+    max-width: 70vw;
+  }
+}

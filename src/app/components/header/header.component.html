@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-md navbar-dark">
+  <div class="container py-3 d-flex justify-content-between align-items-center">
+
+    <a
+      [routerLink]="['/']"
+      class="navbar-brand">
+      <img src="assets/images/logo.svg" />
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarSupportedContent">
+      <ul class="navbar-nav d-none d-sm-flex flex-row">
+        <li class="nav-item mr-4">
+          <a
+            [routerLink]="['/']"
+            routerLinkActive="active"
+            class="nav-link">
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item mr-4">
+          <a
+            [routerLink]="['/']"
+            class="nav-link">
+            <span>Purchase pass</span>
+          </a>
+        </li>
+        <li class="nav-item mr-4">
+          <a
+            [routerLink]="['/']"
+            class="nav-link">
+            <span>FAQs</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['/']"
+            class="nav-link">
+            <span>Login</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>

@@ -1,0 +1,35 @@
+{
+  "id":1,
+  "name":"Heavyweight championship of the world",
+  "slogan":"Clash on the dunes",
+  "date":"2019-12-07T22:00:00+0000",
+  "matchNumber":2,
+  "location":{
+    "city":"Diriyah",
+    "country":"Saudi Arabia"
+  },
+  "fighters":[
+    {
+      "name":{
+        "firstName":"Andy",
+        "surname":"Ruiz"
+      },
+      "position":"Left",
+      "images":{
+        "background":"assets/images/fighter-bg1.png",
+        "foreground":"assets/images/fighter1.png"
+      }
+    },
+    {
+      "name":{
+        "firstName":"Anthony",
+        "surname":"Joshua"
+      },
+      "position":"Right",
+      "images":{
+        "background":"assets/images/fighter-bg2.png",
+        "foreground":"assets/images/fighter2.png"
+      }
+    }
+  ]
+}

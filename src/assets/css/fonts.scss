@@ -1,0 +1,57 @@
+@mixin font-std {
+  font-family: "nimbus-sans",sans-serif;
+}
+
+@mixin font-condensed {
+  font-family: "nimbus-sans-condensed",sans-serif;
+}
+
+@mixin font-extended {
+  font-family: "nimbus-sans-extended",sans-serif;
+}
+
+.font-std {
+  @include font-std();
+  font-weight: 400;
+
+  &-light {
+    @extend .font-std;
+    font-weight: 300;
+  }
+
+  &-bold {
+    @extend .font-std;
+    font-weight: 700;
+  }
+
+  &-bolder {
+    @extend .font-std;
+    font-weight: 900;
+
+    &-i {
+      @extend .font-std;
+      font-weight: 900;
+      font-style: italic;
+    }
+  }
+}
+
+.font-condensed {
+  @include font-condensed();
+  font-weight: 400;
+
+  &-bold {
+    @extend .font-condensed;
+    font-weight: 700;
+  }
+
+  &-bolder {
+    @extend .font-condensed;
+    font-weight: 900;
+  }
+}
+
+.font-extended {
+  @include font-extended();
+  font-weight: 700;
+}

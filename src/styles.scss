@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/css/vars";
+@import '~bootstrap/scss/bootstrap';
+@import "./assets/css/fonts.scss";
+
+body {
+  background-color: #000000;
+}
+
+h2 {
+  @include font-std();
+}
+
+button.btn {
+  @include font-condensed();
+}

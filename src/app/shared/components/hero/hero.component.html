@@ -1,0 +1,100 @@
+<div
+  id="heroWrapper"
+  class="row text-white m-0">
+
+  <div class="col-12 d-flex justify-content-center align-items-center">
+
+    <div
+      *ngIf="!!event.fighters"
+      id="heroFighters"
+      class="d-none d-md-block">
+      <ng-container *ngFor="let fighter of event.fighters">
+        <div
+          class="fighterImage"
+          [ngStyle]="{
+            'background-image': 'url(' + fighter.images.foreground + ')',
+            'background-position-x': fighter.position === 'Left' ? '100% ': '0%',
+            'left': fighter.position === 'Left' ? 0 : 'auto',
+            'right': fighter.position === 'Right' ? 0 : 'auto',
+            'z-index': fighter.position === 'Left' ? 0 : 1
+          }">
+          &nbsp;
+        </div>
+      </ng-container>
+    </div>
+
+    <div
+      id="heroInner"
+      class="container text-center font-shadow">
+
+      <div class="row">
+        <h1 class="col-12 d-flex justify-content-center text-uppercase font-condensed-bolder">
+          {{ event.fighters[0].name.surname }}
+          <span class="text-secondary font-std-light rotate-270 sepVs">
+            VS
+          </span>
+          {{ event.fighters[1].name.surname }}
+          <span class="text-secondary ml-1">
+            {{ event.matchNumber }}
+          </span>
+        </h1>
+        <h2
+          #slogan
+          class="col-12 d-flex justify-content-center text-uppercase text-secondary font-std-bold mb-1">
+          {{ event.slogan }}
+        </h2>
+        <div class="col-12 d-flex justify-content-center text-uppercase text-secondary font-extended eventInfo">
+          {{ event.name }}
+        </div>
+        <div class="col-12 d-flex justify-content-center text-uppercase font-extended eventInfo">
+          {{ event.date }}
+        </div>
+        <div class="col-12 d-flex justify-content-center text-uppercase font-extended eventInfo">
+          {{ event.location.city }}, {{ event.location.country }}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <button
+            type="button"
+            class="btn btn-primary text-uppercase font-condensed-bolder p-2 px-sm-4"
+            aria-label="Watch live now"
+            (click)="watchLive()">
+            <span aria-hidden="true">Watch live now</span>
+          </button>
+          <span class="font-extended rotate-270 mx-2 sepOr">
+            OR
+          </span>
+          <button
+            type="button"
+            class="btn btn-primary text-uppercase font-condensed-bolder p-2 px-sm-4"
+            aria-label="Purchase your pass"
+            (click)="purchasePass()">
+            <span aria-hidden="true">Purchase your pass</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div id="heroBack">
+  <div
+    *ngFor="let fighter of event.fighters"
+    class="bgImage"
+    [ngStyle]="{
+      'background-image': 'url(' + fighter.images.background + ')',
+      'background-position-x': fighter.position,
+      'left': fighter.position === 'Left' ? 0 : 'auto',
+      'right': fighter.position === 'Right' ? 0 : 'auto',
+      'z-index': fighter.position === 'Left' ? 0 : 1
+    }">
+  </div>
+</div>
+
+<div id="shadowBottom">
+  &nbsp;
+</div>
